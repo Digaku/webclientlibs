@@ -1,13 +1,13 @@
-var elemList = document.getElementsByName('dg_share');
+var elemList = document.getElementsByTagName('dg:share');
 var elemCount = elemList.length;
 for (var elemIt = 0; elemIt < elemCount; elemIt++) {
     var el = elemList[elemIt];
 	el.onclick = function(){
-	    var share_url = this.getAttribute('share_url') || window.location.href;
-	    var share_text = this.getAttribute('share_message');
-		var loc = "http://digaku.com/share?u=" + share_url;
+	    var share_url = this.getAttribute('url') || window.location.href;
+	    var share_text = this.getAttribute('message');
+		var loc = "http://digaku.com/share?u=" + encodeURIComponent(share_url);
 		if (share_text) {
-		    loc = loc + '&message=' + share_text;
+		    loc = loc + '&message=' + encodeURIComponent(share_text);
 	    }
 		var width = 626;
 		var height = 436;
