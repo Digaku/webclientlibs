@@ -43,11 +43,11 @@ for (var elemIt = 0; elemIt < elemCount; elemIt++) {
 	    this.setAttribute('style', base_style +
     	    'background-color:#5eafde;'+
     	    'color:#fffbe2;');
-    }
+    };
     el.onmouseout = function(){
 	    this.setAttribute('style', base_style +
     	    'background-color:#bae5ff;'+
     	    'color:#5eafde;');
-    }
+    };
     el.onmouseout();
 }
