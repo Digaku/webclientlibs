@@ -32,8 +32,8 @@ for (var elemIt = 0; elemIt < elemCount; elemIt++) {
     	    'font-weight:normal;'+
     	    'text-decoration:none;'+
     	    'padding:3px 5px 3px 23px;'+
-    	    'line-height:21px;'+
-    	    'cursor:hand;'+
+    	    'line-height:22px;'+
+    	    'cursor:pointer;'+
     	    'border:1px solid #5eafde;'+
     	    'border-radius:3px;'+
     	    'background-image:url(icon.png);'+
