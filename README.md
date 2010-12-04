@@ -14,3 +14,5 @@ Examples
 
 Read into test.html in every packages.
 
+or goto http://developer.digaku.com/api/wiki/DevLibraries
+
