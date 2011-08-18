@@ -1,13 +1,14 @@
 var elemList = document.getElementsByTagName('dg:share');
+var base_url = 'http://mindtalk.com';
 var elemCount = elemList.length;
 for (var elemIt = 0; elemIt < elemCount; elemIt++) {
     var el = elemList[elemIt];
 	el.onclick = function(){
 	    var share_url = this.getAttribute('url') || window.location.href;
 	    var share_text = this.getAttribute('message');
-		var loc = "http://digaku.com/share?u=" + encodeURIComponent(share_url);
+		var loc = base_url + "/mind?u=" + encodeURIComponent(share_url);
 		if (share_text) {
-		    loc = loc + '&message=' + encodeURIComponent(share_text);
+		    loc = loc + '&desc=' + encodeURIComponent(share_text);
 	    }
 		var width = 626;
 		var height = 436;
@@ -36,18 +37,16 @@ for (var elemIt = 0; elemIt < elemCount; elemIt++) {
     	    'cursor:pointer;'+
     	    'border:1px solid #5eafde;'+
     	    'border-radius:3px;'+
-    	    'background-image:url(icon.png);'+
-    	    'background-position:4px center;'+
-    	    'background-repeat:no-repeat;';
+    	    'background:url("' + base_url + '/img/icon_mindtalk.png") no-repeat white 1px center;';
 	el.onmouseover = function(){
 	    this.setAttribute('style', base_style +
-    	    'background-color:#5eafde;'+
-    	    'color:#fffbe2;');
+    	    'background-color:#EDFFFC;'+
+    	    'color:#000;');
     };
     el.onmouseout = function(){
 	    this.setAttribute('style', base_style +
-    	    'background-color:#bae5ff;'+
-    	    'color:#5eafde;');
+    	    'background-color:#FFF;'+
+    	    'color:#0D8263;');
     };
     el.onmouseout();
 }
