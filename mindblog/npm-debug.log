@@ -1,0 +1,109 @@
+info it worked if it ends with ok
+verbose cli [ 'node', '/opt/local/bin/npm', 'install', '-g', 'less' ]
+info using npm@1.1.0-3
+info using node@v0.6.10
+verbose config file /Users/robin/.npmrc
+verbose config file /opt/local/etc/npmrc
+verbose config file /opt/local/lib/node_modules/npm/npmrc
+verbose cache add [ 'less', null ]
+silly cache add: name, spec, args [ undefined, 'less', [ 'less', null ] ]
+verbose parsed url { pathname: 'less', path: 'less', href: 'less' }
+verbose addNamed [ 'less', '' ]
+verbose addNamed [ null, '' ]
+silly name, range, hasData [ 'less', '', false ]
+verbose raw, before any munging less
+verbose url resolving [ 'https://registry.npmjs.org/', './less' ]
+verbose url resolved https://registry.npmjs.org/less
+verbose etag "6LVXZQJZCZRGK8QYHFQL41LD8"
+http GET https://registry.npmjs.org/less
+http 304 https://registry.npmjs.org/less
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.1.0 (Erlang OTP/R14B04)',
+silly get cb     etag: '"6LVXZQJZCZRGK8QYHFQL41LD8"',
+silly get cb     date: 'Thu, 23 Feb 2012 08:33:14 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag less from cache
+silly name, range, hasData 2 [ 'less', '', true ]
+silly versions [ 'less',
+silly versions   [ '1.0.10',
+silly versions     '1.0.11',
+silly versions     '1.0.14',
+silly versions     '1.0.18',
+silly versions     '1.0.19',
+silly versions     '1.0.21',
+silly versions     '1.0.32',
+silly versions     '1.0.36',
+silly versions     '1.0.5',
+silly versions     '1.0.40',
+silly versions     '1.0.41',
+silly versions     '1.0.44',
+silly versions     '1.1.0',
+silly versions     '1.1.1',
+silly versions     '1.1.2',
+silly versions     '1.1.4',
+silly versions     '1.1.5',
+silly versions     '1.1.6',
+silly versions     '1.2.0',
+silly versions     '1.2.1',
+silly versions     '1.2.2' ] ]
+verbose bin dist [ '0.6-ares1.7.5-DEV-evundefined-openssl1.0.0g-v83.6.6.20-darwin-x64-11.2.0',
+verbose bin dist   { shasum: '0d6a59d640cc79d2a228b477c99cc4a45bd2c443',
+verbose bin dist     tarball: 'http://registry.npmjs.org/less/-/less-1.2.2.tgz' } ]
+verbose caching /Users/robin/.npm/less/1.2.2/package/package.json
+verbose loadDefaults less@1.2.2
+silly resolved [ { name: 'less',
+silly resolved     description: 'Leaner CSS',
+silly resolved     url: 'http://lesscss.org',
+silly resolved     keywords: [ 'css', 'parser', 'lesscss', 'browser' ],
+silly resolved     author: { name: 'Alexis Sellier', email: 'self@cloudhead.net' },
+silly resolved     contributors: [],
+silly resolved     version: '1.2.2',
+silly resolved     bin: { lessc: './bin/lessc' },
+silly resolved     main: './lib/less/index',
+silly resolved     directories: { test: './test' },
+silly resolved     engines: { node: '>=0.4.0' },
+silly resolved     _id: 'less@1.2.2',
+silly resolved     dependencies: {},
+silly resolved     devDependencies: {},
+silly resolved     optionalDependencies: {},
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.0-3',
+silly resolved     _nodeVersion: 'v0.6.10',
+silly resolved     _defaultsLoaded: true } ]
+info into /opt/local/lib less@1.2.2
+info installOne less@1.2.2
+info unbuild /opt/local/lib/node_modules/less
+verbose caching /opt/local/lib/node_modules/less/package.json
+verbose loadDefaults less@1.2.2
+info preuninstall less@1.2.2
+info uninstall less@1.2.2
+verbose unbuild less@1.2.2 [ true,
+verbose unbuild less@1.2.2   '/opt/local/lib/node_modules',
+verbose unbuild less@1.2.2   '/opt/local/lib/node_modules' ]
+verbose binRoot [ '/opt/local/bin', { lessc: './bin/lessc' } ]
+ERR! error installing less@1.2.2
+info unbuild /opt/local/lib/node_modules/less
+verbose caching /opt/local/lib/node_modules/less/package.json
+verbose loadDefaults less@1.2.2
+info preuninstall less@1.2.2
+info uninstall less@1.2.2
+verbose unbuild less@1.2.2 [ true,
+verbose unbuild less@1.2.2   '/opt/local/lib/node_modules',
+verbose unbuild less@1.2.2   '/opt/local/lib/node_modules' ]
+verbose binRoot [ '/opt/local/bin', { lessc: './bin/lessc' } ]
+ERR! error rolling back less@1.2.2 Error: EACCES, permission denied '/opt/local/bin/lessc'
+verbose installOne cb less@1.2.2
+ERR! Error: EACCES, permission denied '/opt/local/bin/lessc'
+ERR! 
+ERR! Please try running this command again as root/Administrator.
+ERR! 
+ERR! System Darwin 11.2.0
+ERR! command "node" "/opt/local/bin/npm" "install" "-g" "less"
+ERR! cwd /Users/robin/Development/digaku/webclientlibs/mindblog
+ERR! node -v v0.6.10
+ERR! npm -v 1.1.0-3
+ERR! path /opt/local/bin/lessc
+ERR! code EACCES
+ERR! message EACCES, permission denied '/opt/local/bin/lessc'
+ERR! errno {}
+verbose exit [ 1, true ]

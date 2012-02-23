@@ -1,0 +1,105 @@
+
+
+// CSS Reset
+@import "bootstrap/less/bootstrap.less";
+
+* {
+    outline: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.mind-blog-container {
+  width: 100%;
+  padding: 10px;
+  //border: 1px solid #CACACA;
+  outline: none;
+
+  /*
+  &.min{
+    float: left;
+    width: 400px;
+  }*/
+
+  .mind-blog-panel-left {
+    float: left;
+    position: fixed;
+  }
+
+  .mind-blog-panel-right {
+    float: left;
+    max-width: 40%;
+    margin-left: 340px;
+  }
+
+  .blog-item {
+    padding: 15px;
+    margin: 15px;
+    border-bottom: 2px dashed #DFDFDF;
+    max-width: 600px;
+    overflow: hidden;
+    .transition(0.5s);
+
+    .blog-item-thumb {
+        float: left;
+        padding: 5px;
+        width: 100px;
+    }
+
+    .blog-item-content-outer {
+        padding: 5px;
+        float: left;
+        width: 400px;
+    }
+
+    &.blog-item-min {
+        .border-radius(5px);
+
+        &:hover {
+            background-color: #CCFFCC;
+            cursor: pointer;
+        }
+        &.blog-item-selected {
+            background-color: darken(#CCFFCC, 10%);
+        }
+    }
+
+  }
+}
+
+.mind-blog-title {
+    font-size: 42px;
+    font-weight: bold;
+    small {
+        font-size: 20px;
+        color: #CACACA;
+    }
+}
+
+.mind-blog-content {
+    > div {
+        .blog-item-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+}
+
+.post-viewer {
+    float: left;
+    width: 600px;
+    outline: none;
+
+    .message-content{
+        h1 {
+            font-size: 20px;
+            color: #767d76;
+        }
+        h2 {
+            font-size: 17px;
+            color: #767d76;
+        }
+    }
+}
