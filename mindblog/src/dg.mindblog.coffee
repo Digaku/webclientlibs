@@ -56,6 +56,18 @@ class mt.ui.BlogContainer
     mt.ui.BlogContainer.superClass_.render.call(@, elm)
     @setTitle(@title)
 
+
+  enterDocument: ->
+    mt.ui.BlogContainer.superClass_.enterDocument.call(@)
+    self = this
+    goog.events.listen this.titleElm_, goog.events.EventType.CLICK, (e)->
+      self.maximizeAllPosts()
+      self.hidePost()
+
+  exitDocument: ->
+    mt.ui.BlogContainer.superClass_.exitDocument.call(@)
+    goog.events.unlisten(this.titleElm_)
+
   setTitle: (title, safe=false)->
     if safe
       this.titleElm_.textContent = title
@@ -67,11 +79,13 @@ class mt.ui.BlogContainer
     this.forEachChild (p)->
       p.minimize()
     goog.dom.classes.add(@getElement(), goog.getCssName("min"))
+    goog.style.setStyle(this.panel1Elm_, {"position":"fixed"})
 
   maximizeAllPosts: ->
     this.forEachChild (p)->
       p.maximize()
     goog.dom.classes.remove(@getElement(), goog.getCssName("min"))
+    goog.style.setStyle(this.panel1Elm_, {"position":"initial"})
 
   setPostViewer: (pv, render)->
     this.postViewer_ = pv
@@ -87,6 +101,7 @@ class mt.ui.BlogContainer
 
   hidePost: ->
     this.postViewer_.setVisible(false)
+
 
 
 class mt.ui.BlogItem
@@ -208,6 +223,11 @@ mt.mindblog.init = ()->
   # Inject css
   st = goog.dom.createDom("link", {"rel":"stylesheet", "type":"text/css", "href":"dg.mindblog.css"})
   document.body.insertBefore(st, document.body.firstChild)
+
+  # set global flag
+  window['digaku'] = {
+    'baseurl': 'http://www.mindtalk.com'
+  }
 
   rootElm = document.getElementsByTagName("mt:mindblog")[0]
 

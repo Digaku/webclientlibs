@@ -3699,7 +3699,6 @@ a.thumbnail:hover {
 }
 .mind-blog-container .mind-blog-panel-left {
   float: left;
-  position: fixed;
 }
 .mind-blog-container .mind-blog-panel-right {
   float: left;
@@ -3743,6 +3742,7 @@ a.thumbnail:hover {
 .mind-blog-title {
   font-size: 42px;
   font-weight: bold;
+  cursor: pointer;
 }
 .mind-blog-title small {
   font-size: 20px;
@@ -3764,4 +3764,7 @@ a.thumbnail:hover {
 .post-viewer .message-content h2 {
   font-size: 17px;
   color: #767d76;
+}
+.headerlink {
+  display: none;
 }
