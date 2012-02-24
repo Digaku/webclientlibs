@@ -10,8 +10,11 @@ goog.require("goog.ui.Control")
 goog.require("goog.ui.Container")
 goog.require("goog.ui.ContainerRenderer")
 goog.require('goog.net.Jsonp')
+goog.require('goog.events')
 
 goog.require('dg.MsgCompiler')
+
+mt.mindblog.VERSION = "$VERSION$"
 
 class mt.ui.BlogContainer
 
@@ -94,7 +97,8 @@ class mt.ui.BlogContainer
 
   viewPost: (p)->
     this.postViewer_.setTitle(p.post.title)
-    this.postViewer_.setContent(dg.MsgCompiler.compileAll(p.post.message, 'Article'))
+    this.postViewer_.setContent(window['dg']['MsgCompiler']['compileAll'](p.post.message, 'Article'))
+    this.postViewer_.setCreator(p.post.creator)
     this.postViewer_.setVisible(true)
     this.forEachChild (cp)->cp.setSelected(false)
     p.setSelected(true)
@@ -137,12 +141,12 @@ class mt.ui.BlogArticle
     baseClass = this.getBaseClass()
     elm = dom("div", {"class":baseClass})
 
-    @thumbContainerElm_ = dom("div", {"class":gc(baseClass, "thumb")}, dom("img", {"src":@post.thumbnail_url}))
+    @thumbContainerElm_ = dom("div", {"class":gc(baseClass, "thumb")}, dom("img", {"src":@post['thumbnail_url']}))
 
     @titleElm_ = dom("div", {"class":gc(baseClass, "title")})
     @descElm_ = dom("div")
 
-    @titleElm_.textContent = @post.title
+    @titleElm_.textContent = @post['title']
     @descElm_.textContent = @post.short_desc
 
     rightElm = dom("div", {"class":gc(baseClass, "content-outer")}, @titleElm_, @descElm_,
@@ -198,8 +202,10 @@ class mt.ui.PostViewer
   createDom: ->
     dom = goog.dom.createDom
     this.titleElm_ = dom("h2")
+    this.creatorElm_ = dom("div", {"class":goog.getCssName("post-creator")})
     this.postContentElm_ = dom("div", {"class":goog.getCssName("message-content")})
-    elm = dom("div", {"class":this.getRenderer().getCssClass()}, this.titleElm_, this.postContentElm_)
+    elm = dom("div", {"class":this.getRenderer().getCssClass()},
+      this.titleElm_, this.creatorElm_, this.postContentElm_)
     @setElementInternal(elm)
 
   enterDocument: ->
@@ -213,46 +219,57 @@ class mt.ui.PostViewer
   exitDocument: ->
     goog.events.unlisten(this.getElement())
 
+  ###
+  set post title
+  ###
   setTitle: (title)->this.titleElm_.textContent = title
   setContent: (msg)->this.postContentElm_.innerHTML = msg
+  setCreator: (creator)->this.creatorElm_.innerHTML = "by: <a href=\"#{digaku.baseurl}/u/#{creator["name"]}\">#{creator["full_name"]}</a>"
 
-
+digaku = {
+  baseurl: 'http://www.mindtalk.com'
+}
 
 mt.mindblog.init = ()->
 
-  # Inject css
-  st = goog.dom.createDom("link", {"rel":"stylesheet", "type":"text/css", "href":"dg.mindblog.css"})
-  document.body.insertBefore(st, document.body.firstChild)
+  console.log("Mindblog " + mt.mindblog.VERSION)
 
-  # set global flag
-  window['digaku'] = {
-    'baseurl': 'http://www.mindtalk.com'
-  }
+  goog.events.listen window, goog.events.EventType.LOAD, (e)->
 
-  rootElm = document.getElementsByTagName("mt:mindblog")[0]
+    rootElm = document.getElementsByTagName("mt:mindblog")[0]
 
-  user_name = rootElm.getAttribute("user_name")
+    theme = rootElm.getAttribute("theme")
 
-  blog = new mt.ui.BlogContainer("#{user_name} <small>Mindtalk's blog</small>")
-  blog.createDom()
-  blog.render(rootElm)
+    if theme == "default"
+      # Inject css
+      st = goog.dom.createDom("link", {"rel":"stylesheet", "type":"text/css", "href":"dg.mindblog-latest.min.css?#{mt.mindblog.VERSION}"})
+      document.body.insertBefore(st, document.body.firstChild)
 
-  postViewer = new mt.ui.PostViewer()
-  blog.setPostViewer(postViewer, true)
+    user_name = rootElm.getAttribute("user_name")
 
-  goog.events.listen postViewer, goog.events.EventType.DBLCLICK, (e)->
-    blog.maximizeAllPosts()
-    blog.hidePost()
+    blog = new mt.ui.BlogContainer("#{user_name} <small>Mindtalk's blog</small>")
+    blog.createDom()
+    blog.render(rootElm)
+
+    postViewer = new mt.ui.PostViewer()
+    blog.setPostViewer(postViewer, true)
+    postViewer.setVisible(false)
+
+    goog.events.listen postViewer, goog.events.EventType.DBLCLICK, (e)->
+      blog.maximizeAllPosts()
+      blog.hidePost()
+
+    jsonp = new goog.net.Jsonp("http://api.mindtalk.com/v1/user/stream")
+    jsonp.setRequestTimeout(20000)
+    jsonp.send {'name':user_name,'rf':'json','kind':'Article'}, (resp)->
+      for post in resp.result['posts']
+        post.short_desc = post['message'][..400]
+        p = new mt.ui.BlogArticle(post)
+        blog.addChild(p, true)
+
+        goog.events.listen p, goog.ui.Component.EventType.ACTION, (e)->
+          blog.minimizeAllPosts()
+          blog.viewPost(e.target)
 
 
-  jsonp = new goog.net.Jsonp("http://api.mindtalk.com/v1/user/stream")
-  jsonp.send {'name':user_name,'rf':'json','kind':'Article'}, (resp)->
-    for post in resp.result.posts
-      post.short_desc = post.message[..400]
-      p = new mt.ui.BlogArticle(post)
-      blog.addChild(p, true)
-
-      goog.events.listen p, goog.ui.Component.EventType.ACTION, (e)->
-        blog.minimizeAllPosts()
-        blog.viewPost(e.target)
-
+mt.mindblog.init()

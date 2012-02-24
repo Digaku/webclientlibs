@@ -3757,6 +3757,10 @@ a.thumbnail:hover {
   width: 600px;
   outline: none;
 }
+.post-viewer .message-content {
+  border-top: 2px solid #DADADA;
+  padding-top: 15px;
+}
 .post-viewer .message-content h1 {
   font-size: 20px;
   color: #767d76;

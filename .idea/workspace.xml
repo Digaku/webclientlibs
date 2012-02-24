@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87fa89ba-c70c-4420-89d2-e916be125857" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mindblog/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mindblog/index_example.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mindblog/Makefile" afterPath="$PROJECT_DIR$/mindblog/Makefile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mindblog/css/dg.mindblog.less" afterPath="$PROJECT_DIR$/mindblog/css/dg.mindblog.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mindblog/dg.mindblog.css" afterPath="$PROJECT_DIR$/mindblog/dg.mindblog.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mindblog/dg.mindblog.js" afterPath="$PROJECT_DIR$/mindblog/dg.mindblog.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mindblog/src/dg.mindblog.coffee" afterPath="$PROJECT_DIR$/mindblog/src/dg.mindblog.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mindblog/test.html" afterPath="$PROJECT_DIR$/mindblog/test.html" />
     </list>
     <ignored path="webclientlibs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,19 +32,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="dg.mindblog.coffee" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="dg.mindblog.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mindblog/src/dg.mindblog.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="229" column="3" selection-start="6544" selection-end="6544" vertical-scroll-proportion="0.51526034">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dg.mindblog.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mindblog/css/dg.mindblog.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="16" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0">
+            <state line="244" column="108" selection-start="7105" selection-end="7105" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -49,7 +44,7 @@
       <file leaf-file-name="MessageCompiler.min.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mindblog/js/MessageCompiler.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="31" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
+            <state line="100" column="99" selection-start="39027" selection-end="39041" vertical-scroll-proportion="-6.6153846">
               <folding />
             </state>
           </provider>
@@ -58,7 +53,25 @@
       <file leaf-file-name="test.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mindblog/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="6" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0">
+            <state line="7" column="6" selection-start="225" selection-end="225" vertical-scroll-proportion="-4.375">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index_example.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mindblog/index_example.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="7" selection-start="317" selection-end="317" vertical-scroll-proportion="0.3816047">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dg.mindblog.less" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mindblog/css/dg.mindblog.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="91" column="17" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -104,9 +117,10 @@
         <option value="$PROJECT_DIR$/mindblog/css/bootstrap/lib/patterns.less" />
         <option value="$PROJECT_DIR$/mindblog/css/bootstrap/lib/variables.less" />
         <option value="$PROJECT_DIR$/mindblog/js/MessageCompiler.js" />
-        <option value="$PROJECT_DIR$/mindblog/test.html" />
         <option value="$PROJECT_DIR$/mindblog/js/MessageCompiler.min.js" />
+        <option value="$PROJECT_DIR$/mindblog/test.html" />
         <option value="$PROJECT_DIR$/mindblog/css/dg.mindblog.less" />
+        <option value="$PROJECT_DIR$/mindblog/index_example.html" />
         <option value="$PROJECT_DIR$/mindblog/src/dg.mindblog.coffee" />
       </list>
     </option>
@@ -142,6 +156,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -192,41 +207,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mindblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webclientlibs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webclientlibs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.JavaScript" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.JavaScript" />
     <property name="DefaultHtmlFileTemplate" value="Html" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager" selected="JavaScript Debug.test.html">
     <configuration default="false" name="test.html" type="JavascriptDebugSession" factoryName="Local" temporary="true">
@@ -289,7 +285,6 @@
     <frame x="0" y="22" width="1280" height="703" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25445706" sideWeight="0.51541096" order="1" side_tool="true" content_ui="tabs" />
@@ -300,11 +295,12 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="100" y="122" width="1080" height="503" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -363,38 +359,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/closure/closure/goog/style/style.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1104" column="22" selection-start="41032" selection-end="41032" vertical-scroll-proportion="2.1869159">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mindblog/dg.mindblog.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="86" selection-end="86" vertical-scroll-proportion="0.14018692">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/closure/closure/goog/net/jsonp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="3" selection-start="1404" selection-end="1404" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/closure/closure/goog/ui/containerrenderer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="44" selection-start="5136" selection-end="5144" vertical-scroll-proportion="-3.3461537">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/closure/closure/goog/ui/controlrenderer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="76" column="31" selection-start="2779" selection-end="2779" vertical-scroll-proportion="0.0">
@@ -430,25 +394,6 @@
         <state line="324" column="14" selection-start="11552" selection-end="11558" vertical-scroll-proportion="0.3326613" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mindblog/css/bootstrap/less/bootstrap.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mindblog/js/MessageCompiler.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="31" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mindblog/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="6" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/closure/closure/goog/ui/container.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="818" column="36" selection-start="24930" selection-end="24938" vertical-scroll-proportion="0.0">
@@ -463,16 +408,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mindblog/css/bootstrap/less/bootstrap.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mindblog/css/bootstrap/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mindblog/css/bootstrap/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="18" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mindblog/js/MessageCompiler.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="99" selection-start="39027" selection-end="39041" vertical-scroll-proportion="-6.6153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mindblog/dg.mindblog.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3758" column="1" selection-start="85906" selection-end="85906" vertical-scroll-proportion="0.3678161">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mindblog/css/dg.mindblog.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="16" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0">
+        <state line="91" column="17" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mindblog/src/dg.mindblog.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="229" column="3" selection-start="6544" selection-end="6544" vertical-scroll-proportion="0.51526034">
+        <state line="244" column="108" selection-start="7105" selection-end="7105" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mindblog/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="6" selection-start="225" selection-end="225" vertical-scroll-proportion="-4.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mindblog/index_example.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="7" selection-start="317" selection-end="317" vertical-scroll-proportion="0.3816047">
           <folding />
         </state>
       </provider>
