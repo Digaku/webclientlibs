@@ -59,9 +59,9 @@ deploy: dg.mindblog-$(VERSION).min.js README.md dg.mindblog-$(VERSION).min.css d
 	zip mindtalk-blog-latest.zip $^
 
 update: deploy
-	scp -P 771 mindtalk-blog-*.zip anvie@immortall:www/mindblog/
-	scp -P 771 dg.mindblog-$(VERSION).min.js anvie@immortall:www/mindblog/
-	scp -P 771 dg.mindblog-$(VERSION).min.css anvie@immortall:www/mindblog/
+	rsync -avzrh --progress --rsh='ssh -p771' \
+	 	*.zip dg.mindblog-*.min.js dg.mindblog-*.min.css \
+		anvie@immortall:~/www/mindblog/
 
 clean:
 	rm -f *.min.js

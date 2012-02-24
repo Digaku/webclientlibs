@@ -96,9 +96,9 @@ class mt.ui.BlogContainer
       pv.render(this.detailPlaceElm_)
 
   viewPost: (p)->
-    this.postViewer_.setTitle(p.post.title)
-    this.postViewer_.setContent(window['dg']['MsgCompiler']['compileAll'](p.post.message, 'Article'))
-    this.postViewer_.setCreator(p.post.creator)
+    this.postViewer_.setTitle(p.post['title'])
+    this.postViewer_.setContent(window['dg']['MsgCompiler']['compileAll'](p.post['message'], 'Article'))
+    this.postViewer_.setCreator(p.post['creator'])
     this.postViewer_.setVisible(true)
     this.forEachChild (cp)->cp.setSelected(false)
     p.setSelected(true)
